@@ -1,7 +1,7 @@
 class Polyline {
-    constructor(t) {
+    constructor() {
         this.polyline = document.getElementById('polyline');
-        this.object = document.getElementById("object");
+        this.circle = document.getElementById('circle');
     }
 
     parsePoints = () => {
@@ -30,14 +30,14 @@ class Polyline {
     animate = () => {
         let coordinates = this.getCoordinates();
 
-        this.object.style.left = coordinates['X'][0] + 'px';
-        this.object.style.top = coordinates['Y'][0] + 'px';
+        this.circle.style.left = coordinates['X'][0] + 'px';
+        this.circle.style.top = coordinates['Y'][0] + 'px';
 
         let pos = 1;
 
         const frame = () => {
-            this.object.style.left = coordinates['X'][pos] + 'px';
-            this.object.style.top = coordinates['Y'][pos] + 'px';
+            this.circle.style.left = coordinates['X'][pos] + 'px';
+            this.circle.style.top = coordinates['Y'][pos] + 'px';
             pos++;
         }
 
