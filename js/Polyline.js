@@ -41,6 +41,6 @@ class Polyline {
             pos++;
         }
 
-        setInterval(frame, 40);
+        setInterval(frame, 30);
     }
 }
